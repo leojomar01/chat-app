@@ -1,0 +1,333 @@
+html{
+    background-color:#1e2124;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.register{
+    
+
+    form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 5em;
+        margin: 2em;
+        width: 40vw;
+        padding:5em 1em ;
+        border-radius: 1em;
+        background-color: #424549;
+        
+
+        div{
+            margin-bottom: 2em;
+            display: grid;
+            label{
+                color: white;
+                margin-bottom: 1em;
+
+            }
+            input{
+                background-color: transparent;
+                color: white;
+                width: 15em;
+                padding: .5em;
+            }
+        }
+        span{
+            color:white;
+            margin-bottom: 1em;
+            a{
+                color: white;
+            }
+        }
+        button{
+            font-size: 1.2em;
+            padding: .5rem 1rem;
+            border-radius: .5em;
+        }
+    }
+}
+
+.chat{
+    width: 90vw;
+    height: 90vh;
+    background: #282b30;
+    margin: 5vh;
+    border-radius: 1em;
+
+    .container{
+        display: grid;
+        height: 80vh;
+        padding: 2.5%;
+        grid-template-areas: 
+        "contacts chatcontainer"
+        "nav .";
+        grid-template-columns: 30% 70%;
+        grid-template-rows: 70vh 30vh;
+
+        .nav{
+            grid-area: nav;
+            height: 10vh;
+            display: flex;
+            flex-direction: row;
+            margin:0 2em;
+            border-bottom-right-radius: 1em;
+            border-bottom-left-radius: 1em;
+            background-color: #3a3d42;
+            nav{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                li:nth-child(1){
+                    border: none;
+                }
+                li{
+                    border-left: 1px solid #1e2124;
+                    padding:0 2em;
+                    list-style: none;
+                    i{
+                        font-size: 2em;
+                    }
+                    &:hover{
+                        cursor: pointer;
+                        color: #1e2124;
+                    }
+                }
+
+            }
+            
+            
+        }
+        .contacts{
+            margin:0 2em;
+            border-top-right-radius: 1em;
+            border-top-left-radius: 1em;
+            background: #36393e;
+            padding:0 1em;
+            height: 70vh;
+            
+            .searchBar{
+                margin-top: 1em;
+                margin-bottom: 1em;
+                display: flex;
+                justify-content: center;
+                input{
+                    width: 90%;
+                    outline: none;
+                    padding: 0.2em .5em ;
+                    font-size: 1.3em;
+                    border-radius: .5em;
+                    background-color: #424549;
+                    color: white;
+                }
+            }
+            .list{
+                max-height: 85%;
+                width: 100%;
+                overflow-y: scroll;
+
+                p{color: white;}
+                &::-webkit-scrollbar {
+                    width: 5px;
+                }
+                &::-webkit-scrollbar-track {
+                    box-shadow: inset 0 0 5px grey; 
+                    border-radius: 10px;
+                }
+                &::-webkit-scrollbar-thumb {
+                    background: grey; 
+                    border-radius: 10px;
+                }
+                p{
+
+                }
+                div{
+                    li{
+                        height: 2rem;
+                        padding: .5em 2em;
+                        margin-right: 10px;
+                        list-style: none;
+                        color: white;
+                        border-bottom: 1px solid #3a3d42;
+                        display: flex;
+                        align-items: center;
+                        img{
+                            height: 20px;
+                            border-radius: 50%;
+                            width: 20px;
+                            margin-right: 1em;
+                        }
+                        &:hover{
+                            cursor: pointer;
+                            color: white;
+                            border-bottom: 1px solid #1e2124;
+                            border-radius: 1em;
+                        }
+                    }
+                    .selected{
+                        border: 1px solid #424549;
+                        background-color: #1e2124;
+                        border-radius: 1em;
+                    }
+                }
+            }
+            
+        }
+        .welcome{
+            background-color: #36393e;
+            justify-content: center ;
+            text-align: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            border-radius: 1em;
+
+            img{
+                width: 250px;
+                height: 200px;
+                border-radius: 1em;
+            }
+        }
+        .ChatContainer,.welcome{
+            height: 80vh;
+                .chatHeader{
+                    background-color: #1e2124;
+                    border-radius: 1em 1em 0 0;
+
+                    .userDetails{
+                        display: flex;
+                        align-items: center;
+                        .avatar{
+                            padding:0 2em;
+                            img{
+                                height: 30px;
+                                border-radius: 50%;
+                                width: 30px;
+                            }
+                        }
+                        .username{
+                            justify-self: center;
+                            h3{
+                                color: white;
+                            }
+                        }
+                    }
+                }
+                .chatMessages{
+                    height: 55vh;
+                    padding: 2.5vh;
+                    overflow-y: scroll;
+                    background-color: #36393e;
+
+                    &::-webkit-scrollbar {
+                        width: 5px;
+                    }
+                    &::-webkit-scrollbar-track {
+                        box-shadow: inset 0 0 5px grey; 
+                        border-radius: 10px;
+                    }
+                    &::-webkit-scrollbar-thumb {
+                        background: grey; 
+                        border-radius: 10px;
+                    }
+
+                    div{
+                        .sended,
+                        .recieved{
+                            display:flex;
+                            .content{
+                                border-radius: 1em;
+                                padding: 0 1em;
+                                margin: .2em 0;
+                            }
+                        }
+                        .sended{
+                            justify-content: end;
+                            .content{
+                                background-color: #213753;
+                            }
+                        }
+                        .recieved{
+                            justify-content: start;
+                            .content{
+                                background-color: #424549;
+                            }
+                        }
+                    }
+                }
+                .chatInput{
+                    background-color: #1e2124;
+                    height: 10vh;
+                    border-radius: 0 0 1em 1em;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+
+                    .buttonContainer{
+                        display: flex;
+                        width: 100%;
+                        height: 80%;
+                        justify-content: center;
+                        align-items: center;
+                        position: relative;
+                        .emoji{
+                            position: absolute;
+                            display: flex;
+                            width: 90%;
+                            height: 100%;
+                            align-items: center;
+
+                           
+                            .picker{
+                                height: auto;
+                                position: absolute;
+                                bottom: 100%;
+                            }
+
+                            .icon{
+                                position: absolute;
+                                color: yellow;
+                                left: -2%;
+                                top: 50%;
+                                transform: translate(-50%,-50%);
+                                &:hover{
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                        form{
+                            display: flex;
+                            width: 90%;
+                            z-index: 1;
+
+                            input{
+                                border-radius: 1em;
+                                height: 3em;
+                                width: 100%;
+                                outline: none;
+                                margin-right: 1em;
+                                border-bottom-style: groove;
+                                background-color: #36393e;
+                                padding: 0 1em ;
+                                color: white;
+                            }
+                            button{
+                                border-radius: 1em;
+                                padding: 0 1em;
+                                background-color: #7289da;
+                                outline: none;
+                                &:hover{
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+                }
+        }
+    }
+}
