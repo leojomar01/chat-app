@@ -35,6 +35,8 @@ html{
                 color: white;
                 width: 15em;
                 padding: .5em;
+
+                
             }
         }
         span{
@@ -48,6 +50,9 @@ html{
             font-size: 1.2em;
             padding: .5rem 1rem;
             border-radius: .5em;
+            &:hover{
+                cursor: pointer;
+            }
         }
     }
 }

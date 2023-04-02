@@ -3,7 +3,7 @@ import {useNavigate,Link} from 'react-router-dom';
 import axios from 'axios';
 import { loginRoutes } from '../util/APIroutes';
 import Swal from 'sweetalert2';
-import './scss/login.scss';
+import './scss/style.scss';
 
 
 const Login = () => {
