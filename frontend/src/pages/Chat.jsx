@@ -59,7 +59,7 @@ function Chat() {
     <div className="chat">
       <div className="container">
         <div className="nav">
-          <Navbar/>
+          <Navbar currentUser={currentUser}/>
         </div>
         <Contacts contacts={contacts} currentUser={currentUser} changeCurrentChat={changeCurrentChat} />
         {

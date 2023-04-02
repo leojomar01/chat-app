@@ -14,10 +14,11 @@ html{
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        padding: 5em;
         margin: 2em;
         width: 40vw;
         padding:5em 1em ;
+        padding-bottom: 2em;
+
         border-radius: 1em;
         background-color: #424549;
         
@@ -28,15 +29,12 @@ html{
             label{
                 color: white;
                 margin-bottom: 1em;
-
             }
             input{
                 background-color: transparent;
                 color: white;
                 width: 15em;
                 padding: .5em;
-
-                
             }
         }
         span{
@@ -46,13 +44,35 @@ html{
                 color: white;
             }
         }
-        button{
+        button,input[type=button],.btn{
             font-size: 1.2em;
             padding: .5rem 1rem;
             border-radius: .5em;
             &:hover{
                 cursor: pointer;
             }
+        }
+        .update{
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            
+
+            .deleteAccount{
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+           div{
+            display: flex;
+            gap: 2em;
+            .btn{
+                width: 5em;
+                font: 1em;
+                background-color: #7289da;
+            }
+           }
         }
     }
 }

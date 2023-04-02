@@ -1,8 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom';
 
 
-
-function Navbar() {
+function Navbar({}) {
 
   const navigate = useNavigate();
 
@@ -10,16 +9,20 @@ function Navbar() {
     localStorage.removeItem('chat-app-user');
     navigate('/login');
   };
+
+  const editProfile=()=>{
+    navigate('/editprofile');
+  }
   return (
     <nav>
-        <li title='Notification'>
-          <i class="bi bi-app-indicator"></i>
+        <li title='Edit Profile' onClick={editProfile}>
+          <i className="bi bi-person-circle"></i>
         </li>
         <li title='About'>
-          <i class="bi bi-info-circle"></i>
+          <i className="bi bi-info-circle"></i>
         </li>
         <li title='Logout'onClick={handleLogout}>
-          <i class="bi bi-box-arrow-right"></i>
+          <i className="bi bi-box-arrow-right"></i>
         </li>
     </nav>
   );
